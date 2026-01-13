@@ -6,7 +6,8 @@
     --text-color: #f0f0f0;
     --text-color-secondary: #a0a0a0;
     --border-color: #444;
-    --accent-color: #007bff;
+    --accent-color: #ffd60a;
+    --accent-hover: #ffc300;
     --font-family-main: 'Inter', 'Noto Sans KR', sans-serif;
 }
 
@@ -43,6 +44,7 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     margin-right: 2rem;
+    color: var(--accent-color);
 }
 
 .search-bar {
@@ -108,9 +110,9 @@ main {
 }
 
 .filter-btn.active {
-    background-color: var(--text-color);
-    color: var(--background-color);
-    border-color: var(--text-color);
+    background-color: var(--accent-color);
+    color: #1a1a1a;
+    border-color: var(--accent-color);
     font-weight: 700;
 }
 
@@ -142,11 +144,11 @@ main {
 
 .tool-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 25px rgba(255, 214, 10, 0.3);
 }
 
 .card-header {
-    background-color: #f0f0f0;
+    background-color: var(--accent-color);
     color: #1a1a1a;
     padding: 1rem 1.25rem;
     display: flex;
@@ -161,11 +163,12 @@ main {
 }
 
 .card-category {
-    background-color: #dcdcdc;
+    background-color: rgba(26, 26, 26, 0.3);
     padding: 0.2rem 0.6rem;
     border-radius: 12px;
     font-size: 0.8rem;
     font-weight: 500;
+    color: #1a1a1a;
 }
 
 .card-content {
@@ -279,7 +282,7 @@ main {
 
 .report-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 12px 30px rgba(255, 214, 10, 0.4);
 }
 
 .report-card-content {
@@ -288,8 +291,8 @@ main {
 
 .report-tag {
     display: inline-block;
-    background-color: #bb86fc;
-    color: #121212;
+    background-color: var(--accent-color);
+    color: #1a1a1a;
     padding: 0.3rem 0.8rem;
     border-radius: 12px;
     font-size: 0.8rem;
