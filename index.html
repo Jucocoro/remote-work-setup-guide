@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeOffice Pro | 재택근무 장비 전문 가이드</title>
+    <meta name="description" content="홈오피스 최적화를 위한 장비 추천. 모니터, 책상, 의자 등 생산성을 극대화하는 전문가의 선택을 도와드립니다.">
+    <meta name="keywords" content="homeoffice pro, 재택근무, 홈오피스, wfh, 모니터 추천, 책상 추천, 의자 추천, 스탠딩 데스크, 재택근무 셋업">
+    <link rel="icon" href="https://storage.googleapis.com/gemini-prod/images/workgear_favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">HomeOffice Pro <span style="font-size: 0.5em; color: #999; font-weight: 400;">재택근무 장비 전문 가이드</span></div>
+            <div class="search-bar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+                <input type="text" id="searchInput" placeholder="어떤 장비를 찾고 계신가요?">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="featured-reports">
+            <h2 class="section-title">재택근무 장비 심층 비교</h2>
+            <div class="report-cards-container">
+                <a href="comparison-monitor.html" class="report-card">
+                    <div class="report-card-content">
+                        <span class="report-tag">모니터</span>
+                        <h3>27인치 vs 32인치, 어떤 모니터를 사야할까?</h3>
+                        <p>작업 효율을 극대화하는 최적의 모니터 크기와 해상도 선택 가이드</p>
+                    </div>
+                </a>
+                <a href="comparison-desk.html" class="report-card">
+                    <div class="report-card-content">
+                        <span class="report-tag">책상</span>
+                        <h3>스탠딩 데스크 vs 일반 책상, 진짜 차이는?</h3>
+                        <p>건강과 생산성, 두 마리 토끼를 잡는 책상 선택 비법</p>
+                    </div>
+                </a>
+                <a href="comparison-chair.html" class="report-card">
+                    <div class="report-card-content">
+                        <span class="report-tag">의자</span>
+                        <h3>허먼밀러 vs 시디즈, 가격 차이만큼 성능도 다를까?</h3>
+                        <p>100만원대 프리미엄 의자 vs 30만원대 가성비 의자 실전 비교</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="monitor">모니터</button>
+            <button class="filter-btn" data-category="desk">책상</button>
+            <button class="filter-btn" data-category="chair">의자</button>
+            <button class="filter-btn" data-category="keyboard">키보드</button>
+            <button class="filter-btn" data-category="mouse">마우스</button>
+            <button class="filter-btn" data-category="accessory">액세서리</button>
+            <button class="filter-btn" data-category="audio">오디오</button>
+        </div>
+        <div id="product-grid" class="masonry-grid">
+            <!-- 제품 카드가 여기에 동적으로 추가됩니다. -->
+        </div>
+    </main>
+
+    <footer class="site-footer-bottom">
+        <p>&copy; 2026 WorkGear. All Rights Reserved.<br>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
