@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품 리뷰 | Workstation Kit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .review-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg-color);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+        .product-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+        }
+        .product-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        .product-description {
+            font-size: 1.1rem;
+            color: var(--text-color-secondary);
+        }
+        .review-section {
+            margin: 2rem 0;
+        }
+        .review-section h2 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        .rating-stars {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .pros, .cons {
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+        .pros {
+            background: rgba(102, 126, 234, 0.1);
+            border: 2px solid var(--accent-color);
+        }
+        .cons {
+            background: rgba(255, 100, 100, 0.1);
+            border: 2px solid #ff6464;
+        }
+        .pros h3, .cons h3 {
+            margin-top: 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">Workstation Kit</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="review-container">
+            <div class="product-header">
+                <h1 class="product-name" id="productName">제품 리뷰</h1>
+                <p class="product-description" id="productDesc">제품에 대한 상세 리뷰입니다.</p>
+            </div>
+
+            <div class="review-section">
+                <h2>⭐ 종합 평가</h2>
+                <div class="rating-stars">★★★★☆ 4.0/5.0</div>
+                <p id="overallReview">이 제품은 재택근무자에게 추천합니다. 가성비와 기능성을 모두 갖추었습니다.</p>
+            </div>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h3>✅ 장점</h3>
+                    <ul id="prosList">
+                        <li>합리적인 가격</li>
+                        <li>뛰어난 품질</li>
+                        <li>우수한 내구성</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>⚠️ 단점</h3>
+                    <ul id="consList">
+                        <li>무게가 다소 무거움</li>
+                        <li>조립이 필요함</li>
+                        <li>색상 옵션 제한적</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="review-section">
+                <h2>💰 가격대</h2>
+                <p id="priceInfo">
+                    <strong>온라인:</strong> 약 50만원<br>
+                    <strong>오프라인:</strong> 약 60만원
+                </p>
+            </div>
+
+            <div class="review-section">
+                <h2>🎯 추천 대상</h2>
+                <p id="targetAudience">
+                    - 재택근무하는 분<br>
+                    - 생산성을 높이고 싶은 분<br>
+                    - 장시간 작업하는 분
+                </p>
+            </div>
+
+            <a href="#" class="cta-button" id="productLink">쿠팡에서 보기</a>
+
+            <a href="index.html" class="back-link">← 목록으로 돌아가기</a>
+        </div>
+    </main>
+
+    <footer class="site-footer-bottom">
+        <p>&copy; 2026 Workstation Kit. All Rights Reserved.<br>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+
+        const productData = {
+            'LG 27인치': {
+                name: 'LG 27인치 QHD 모니터',
+                desc: '재택근무 필수템, 생산성 향상 모니터',
+                rating: '★★★★☆ 4.3/5.0',
+                review: 'LG 27인치 모니터는 가성비가 뛰어나며, QHD 해상도로 선명한 화질을 제공합니다.',
+                pros: ['선명한 QHD 해상도', '60Hz 주사율', '눈 보호 기능'],
+                cons: ['스피커 품질 보통', '높이 조절 제한적'],
+                price: '<strong>쿠팡:</strong> 약 35만원<br><strong>다나와:</strong> 약 38만원',
+                target: '- 문서/코딩 작업자<br>- 예산 50만원 이하<br>- 듀얼 모니터 구성 원하는 분',
+                link: 'https://www.coupang.com/vp/products/example-lg-monitor'
+            },
+            '허먼밀러 에어론': {
+                name: '허먼밀러 에어론 체어',
+                desc: '프리미엄 인체공학 의자의 정석',
+                rating: '★★★★★ 4.8/5.0',
+                review: '허먼밀러 에어론은 최고의 인체공학 의자입니다. 장시간 앉아있어도 피로가 없습니다.',
+                pros: ['완벽한 인체공학', '12년 보증', '뛰어난 통기성'],
+                cons: ['고가', '딱딱한 착석감', '무거움'],
+                price: '<strong>공식 대리점:</strong> 약 180만원<br><strong>중고:</strong> 약 100-120만원',
+                target: '- 하루 8시간 이상 앉아서 일하는 분<br>- 허리 통증이 있는 분<br>- 장기 투자 가능한 분',
+                link: 'https://www.coupang.com/vp/products/example-hermanmiller'
+            },
+            'FlexiSpot 스탠딩데스크': {
+                name: 'FlexiSpot 전동 스탠딩 데스크',
+                desc: '건강과 생산성을 동시에',
+                rating: '★★★★☆ 4.4/5.0',
+                review: 'FlexiSpot은 가성비 좋은 전동 스탠딩 데스크입니다. 높이 조절이 부드럽고 조용합니다.',
+                pros: ['전동 높이 조절', '메모리 기능', '안정적인 구조'],
+                cons: ['조립 필요', '무게 제한 50kg', '케이블 정리 부족'],
+                price: '<strong>쿠팡:</strong> 약 45만원<br><strong>공식몰:</strong> 약 50만원',
+                target: '- 허리 통증 예방하고 싶은 분<br>- 장시간 앉아서 일하는 분<br>- 운동 부족인 분',
+                link: 'https://www.coupang.com/vp/products/example-flexispot'
+            }
+        };
+
+        if (product && productData[product]) {
+            const data = productData[product];
+            document.getElementById('productName').textContent = data.name;
+            document.getElementById('productDesc').textContent = data.desc;
+            document.querySelector('.rating-stars').textContent = data.rating;
+            document.getElementById('overallReview').textContent = data.review;
+            
+            document.getElementById('prosList').innerHTML = data.pros.map(p => `<li>${p}</li>`).join('');
+            document.getElementById('consList').innerHTML = data.cons.map(c => `<li>${c}</li>`).join('');
+            
+            document.getElementById('priceInfo').innerHTML = data.price;
+            document.getElementById('targetAudience').innerHTML = data.target;
+            document.getElementById('productLink').href = data.link;
+        } else {
+            document.getElementById('productName').textContent = '제품을 찾을 수 없습니다';
+            document.getElementById('productDesc').textContent = '올바른 제품 이름을 선택해주세요.';
+        }
+    </script>
+</body>
+</html>
